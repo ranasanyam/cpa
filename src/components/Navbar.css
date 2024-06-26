@@ -1,0 +1,32 @@
+/* src/Navbar.css */
+
+/* General Styles for Overlay */
+.navbar-overlay {
+  transition: opacity 5s ease-in-out;
+}
+
+/* General Styles for Sidebar */
+.navbar-sidebar {
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(100%);
+}
+
+/* Open State Styles for Sidebar */
+.navbar-sidebar.open {
+  transform: translateX(0);
+}
+
+/* Open State Styles for Overlay */
+.navbar-overlay.open {
+  opacity: 1;
+}
+
+/* Closed State Styles for Sidebar */
+.navbar-sidebar.closed {
+  transform: translateX(100%);
+}
+
+/* Closed State Styles for Overlay */
+.navbar-overlay.closed {
+  opacity: 0;
+}
