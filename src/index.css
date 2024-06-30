@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Catamaran',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11,7 +12,50 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.group {
+  perspective: 1000px;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
 
+@keyframes modal-in {
+  0%,
+  50% {
+    width: 300px;
+    border-radius: 50%;
+  }
+  55%,
+  100% {
+    right: 50%;
+  }
+  60% {
+    width: 300px;
+    border-radius: 12px;
+  }
+  75% {
+    transform: translate(50%, -50%);
+  }
+}
+
+@keyframes modal-content-in {
+  0%,
+  75% {
+    opacity: 0;
+  }
+  85%,
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-modal {
+  animation: modal-in 1s forwards;
+}
+
+.animate-modal-content {
+  animation: modal-content-in 1s forwards;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

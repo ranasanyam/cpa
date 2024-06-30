@@ -1,51 +1,50 @@
-// import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
-import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
 import Aos from 'aos';
 import { useEffect } from 'react';
 import 'aos/dist/aos.css';
 import Footer from './components/Footer';
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "about",
-    element: <About />,
-  },
-  {
-    path: 'services',
-    element: <Services />
-  },
-  {
-    path: 'blogs',
-    element: <Blogs />
-  },
-  {
-    path: 'contact',
-    element: <Contact />
-  }
-]);
+import Quality from './pages/Quality';
+import ValuableIdeas from './pages/ValuableIdeas';
+import BudgetFriendly from './pages/BudgetFriendly';
+import { Routes, Route } from 'react-router-dom';
+import { useScrollReset } from './custom-hooks/useScrollReset';
+import AccountingServices from './pages/AccountingServices';
+import Taxation from './pages/Taxation';
+import IRSCompliance from './pages/IRSCompliance';
+import IncorporationServices from './pages/IncorporationServices';
+import FinancialAdvisory from './pages/FinancialAdvisory';
+import IndividualServices from './pages/IndividualServices';
+
 
 
 function App() {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+  useScrollReset();
   return (
-    <div className='font-roboto'>
+    <div className='font-catamaran'>
       <Navbar />
-      <RouterProvider router={router} />
+      <Routes>
+        <Route path="*" element={<Home />} />
+        <Route path='/services' element={<Services />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/quality-services" element={<Quality/>} />
+        <Route path="/valuable-ideas" element={<ValuableIdeas />} />
+        <Route path="/budget-friendly" element={<BudgetFriendly />} />
+        <Route path="/services/accounting-services" element={<AccountingServices />} />
+        <Route path="/services/taxation" element={<Taxation />} />
+        <Route path='/services/irs-compliance' element={<IRSCompliance />} />
+        <Route path="/services/incorporation-services" element={<IncorporationServices/> } />
+        <Route path="/services/financial-advisory" element={<FinancialAdvisory />} />
+        <Route path="/services/individual-services" element={<IndividualServices />} />
+      </Routes>
       <Footer />
     </div> 
   );
