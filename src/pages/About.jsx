@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
-    <div className=' bg-[#E5EEF6] py-20 overflow-hidden min-h-screen font-catamaran md:tracking-wide'>
+    <div className=' bg-[#e6f1ff] py-20 overflow-hidden min-h-screen font-catamaran md:tracking-wide'>
       <div className='w-4/5 mx-auto '>
         <div className='py-20'>
           <div className='font-bold text-4xl mb-8 text-center md:text-left text-primary-100'>

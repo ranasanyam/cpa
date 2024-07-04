@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div>
       <HomeCarousel />
-      <div className='min-h-screen bg-[#E5EEF6] py-20 font-catamaran' id='services'>
+      <div className='min-h-screen bg-[#e6f1ff] py-20 font-catamaran' id='services'>
         <div className='w-4/5 mx-auto'>
           <div className='flex items-center justify-between'>
             <div>
@@ -74,7 +74,7 @@ const Home = () => {
         <Link to="/about">
         <div data-aos="fade-up" data-aos-anchor-placement="center-center" className='md:flex w-4/5 mx-auto lg:max-h-[500px]'>
           <div className='md:w-1/2'>
-            <img src="/images/bg-home1.jpg" className='h-full w-full' alt="Handshake" />
+            <img src="/images/handshake.jpg" className='h-full w-full' alt="Handshake" />
           </div>
           <div className='bg-primary-100 md:w-1/2 p-4 py-8 md:p-10 2xl:p-20 flex flex-col justify-center text-light-100'>
             <div className='text-sm md:text-lg font-semibold font-serif'>
@@ -105,9 +105,9 @@ const Home = () => {
           </div>
         </Link>
       </div>
-      <div className='bg-[#E5EEF6] py-20 md:py-30'>
+      <div className='bg-[#e6f1ff] py-20 md:py-30'>
         <div className='w-4/5 mx-auto '>
-          <div className='font-bold text-2xl md:text-[40px] pt-3 text-[#323232] mb-16'>How are we different?</div>
+          <div className='font-bold text-2xl md:text-[40px] pt-3 text-[#323232] mb-16 text-center'>How are we different?</div>
             <div className='grid place-items-center lg:grid-rows-1  lg:grid-cols-3 gap-10'>
               <QualityCard 
                 img={"/icons/quality.png"} 
