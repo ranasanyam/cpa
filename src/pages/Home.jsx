@@ -71,6 +71,7 @@ const Home = () => {
         </div>
       </div>
       <div className='h-full py-10 md:py-20 bg-white font-catamaran'>
+        <Link to="/about">
         <div data-aos="fade-up" data-aos-anchor-placement="center-center" className='md:flex w-4/5 mx-auto lg:max-h-[500px]'>
           <div className='md:w-1/2'>
             <img src="/images/bg-home1.jpg" className='h-full w-full' alt="Handshake" />
@@ -102,6 +103,7 @@ const Home = () => {
             </div>
           </div>
           </div>
+        </Link>
       </div>
       <div className='bg-[#E5EEF6] py-20 md:py-30'>
         <div className='w-4/5 mx-auto '>

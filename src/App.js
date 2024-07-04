@@ -2,7 +2,6 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
-import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Aos from 'aos';
 import { useState, useEffect } from 'react';
@@ -38,7 +37,6 @@ function App() {
       <Navbar isOpen={isOpen} toggleMenu={toggleMenu} />
       <Routes>
         <Route path="*" element={<Home />} />
-        <Route path='/services' element={<Services />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/quality-services" element={<Quality/>} />
