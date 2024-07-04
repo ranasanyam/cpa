@@ -6,7 +6,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 const BudgetFriendly = () => {
   return (
     <div className='bg-light-10'>
-        <div className='w-11/12 lg:w-4/5 mx-auto pt-28 md:pt-36 pb-16'>
+        <div className='w-11/12 lg:w-4/5 mx-auto pt-40 pb-16'>
         <Link to={-1} className='text-xl font-semibold text-light-300'><ArrowBackIcon fontSize='30' /> Back</Link>
         <div className='font-bold text-2xl lg:text-4xl my-6 text-center mt-4 text-[#4d4d4d]'>
                 Budget Friendly

@@ -8,7 +8,7 @@ const About = () => {
     <div className=' bg-[#E5EEF6] py-20 overflow-hidden min-h-screen font-catamaran md:tracking-wide'>
       <div className='w-4/5 mx-auto '>
         <div className='py-20'>
-          <div className='font-bold text-4xl mb-8 text-center md:text-left text-[#4d4d4d]'>
+          <div className='font-bold text-4xl mb-8 text-center md:text-left text-primary-100'>
             About Us
           </div>
           <div className='flex flex-col md:flex-row gap-10 2xl:gap-20'>
@@ -53,7 +53,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className='pt-6 mb-10'>
+      <div className='pt-6 mb-10 bg-light-100 px-10'>
         <div className='text-center font-bold text-2xl py-2 rounded-md md:rounded-lg lg:text-4xl'>
           Our Mission, Values and Vision
         </div>

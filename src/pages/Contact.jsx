@@ -10,7 +10,7 @@ const Contact = () => {
     <div className='bg-[#E5EEF6] py-20 overflow-hidden min-h-screen'>
       <div className='w-4/5 mx-auto font-catamaran'>
         <div className='py-20'>
-          <div className='font-bold text-4xl mb-8 text-center md:text-left text-[#4d4d4d]'>
+          <div className='font-bold text-4xl mb-8 text-center md:text-left text-primary-100'>
             Contact Us
           </div>
           <div className='mt-10 bg-white py-10 px-10 lg:px-20'>

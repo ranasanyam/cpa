@@ -6,7 +6,10 @@ const AccountingServices = () => {
   return (
     <div className='pt-40 pb-20'>
         <div className='w-11/12 md:w-4/5 mx-auto'>
-            <Link to={"/services"} className='text-xl font-semibold text-light-300'><ArrowBackIcon fontSize='30' /> Services</Link>
+        <div className='flex'>
+        <Link to={"/"} className='text-xl font-semibold text-light-300 hover:text-primary-100'>Home / </Link><Link to={"/services"} className='text-xl font-semibold text-light-300 hover:text-primary-100'>Services / </Link><div className='text-xl font-semibold text-primary-100'>Accounting Services</div>
+        </div>
+
             <div id="accounting-services" className='font-bold text-4xl text-[#4d4d4d] my-6 text-center'>Accounting Services</div>
                 <div>
                 <span className='font-bold text-xl text-[#4d4d4d]'>

@@ -6,7 +6,9 @@ const IndividualServices = () => {
   return (
     <div className='pt-40 pb-20'>
     <div className='w-11/12 md:w-4/5 mx-auto'>
-    <Link to={"/services"} className='text-xl font-semibold text-light-300'><ArrowBackIcon fontSize='30' /> Services</Link>
+    <div className='flex'>
+        <Link to={"/"} className='text-xl font-semibold text-light-300 hover:text-primary-100'>Home / </Link><Link to={"/services"} className='text-xl font-semibold text-light-300 hover:text-primary-100'>Services / </Link><div className='text-xl font-semibold text-primary-100'>Individual Services</div>
+        </div>
         <div id="individual-services"  className='font-bold text-2xl md:text-4xl text-[#4d4d4d] my-6 text-center'>Individual Services</div>
         <div className='text-light-300 text-lg mt-2'>
       As an employee or practicing professional, you are hard-pressed for time to personally manage your financials. Our experts offer a range of services

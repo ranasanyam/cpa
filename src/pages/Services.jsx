@@ -13,7 +13,7 @@ const Services = () => {
         <img src={"/images/finance.png"} className='w-full' alt="Finance" />
       </div>
       <div className='w-11/12 md:w-4/5 mx-auto relative'>
-        <div className='font-bold text-4xl mb-8 text-center md:text-left text-[#4d4d4d]'>Services</div>
+        <div className='font-bold text-4xl mb-8 text-center md:text-left text-primary-100'>Services</div>
         <div className='flex flex-col md:flex-row md:justify-between gap-20'>
         <div>
           <div className='my-6 w-fit'>

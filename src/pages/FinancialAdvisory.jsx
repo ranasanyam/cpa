@@ -6,7 +6,9 @@ const FinancialAdvisory = () => {
   return (
     <div className='pt-40 pb-20'>
     <div className='w-11/12 md:w-4/5 mx-auto'>
-    <Link to={"/services"} className='text-xl font-semibold text-light-300'><ArrowBackIcon fontSize='30' /> Services</Link>
+    <div className='flex'>
+        <Link to={"/"} className='text-xl font-semibold text-light-300 hover:text-primary-100'>Home / </Link><Link to={"/services"} className='text-xl font-semibold text-light-300 hover:text-primary-100'>Services / </Link><div className='text-xl font-semibold text-primary-100'>Financial Advisory</div>
+        </div>
         <div id="financial-advisory"  className='font-bold text-2xl md:text-4xl text-[#4d4d4d] my-6 text-center'>Financial Advisory</div>
         <div className='text-light-300 text-lg mt-2'>
       We are all well aware that business conditions are not only dynamic but also growing complex each day. They not only affect your business but also your personal net worth.

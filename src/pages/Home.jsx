@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Service from '../components/Service';
+import ServiceCard from '../components/ServiceCard';
 import HomeCarousel from '../components/Carousel/HomeCarousel';
 import QualityCard from '../components/QualityCard';
 
@@ -9,53 +9,61 @@ const Home = () => {
   return (
     <div>
       <HomeCarousel />
-      <div className='min-h-screen bg-[#E5EEF6] py-20 font-catamaran'>
+      <div className='min-h-screen bg-[#E5EEF6] py-20 font-catamaran' id='services'>
         <div className='w-4/5 mx-auto'>
           <div className='flex items-center justify-between'>
             <div>
               <div className='text-base text-light-300 md:text-xl font-bold font-serif'>Our Services</div>
-              <div className='font-bold text-2xl md:text-[40px] pt-3 text-[#323232]'>What we bring to you</div>
+              
             </div>
-            <div className='underline text-light-300 text-sm md:text-base font-semibold font-serif'>
+            <div className='underline text-light-300 text-sm md:text-base font-semibold font-serif '>
                 <Link to="/services">All Services</Link>
             </div>
           </div>
-          <div className='grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-20'>
-            <Service 
+          <div className='font-bold text-2xl md:text-[40px] pt-3 text-[#323232]'>What we bring to you</div>
+
+          <div className='grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 xs:py-20'>
+            <ServiceCard 
             aosType="flip-up"
             title="Accounting Services"
-            description="Every business entity has a unique structure, and our goal is to understand your specific setup to create an accounting solution tailored to your needs..."
+            description="Every business entity has a unique structure, and our goad is to understand your specific setup to create an accounting solution tailored to your needs..."
             imgUrl='/logos/accounting.png'
+            redirectTo="/services/accounting-services"
             />
-            <Service 
+            <ServiceCard 
             aosType="flip-up"
             title="Taxation"
-            description="Every business entity has a unique structure, and our goal is to understand your specific setup to create an accounting solution tailored to your needs..."
+            description="Contrary to popular belief, effective tax planning begins at the start of the fiscal year. For our high-net-worth(HNW) clients, we offer tailored tax planning services designed to help reduce..."
             imgUrl='/logos/taxation.png'
+            redirectTo="/services/taxation"
             />
-            <Service 
+            <ServiceCard 
             aosType="flip-up"
             title="IRS Compliance"
-            description="Every business entity has a unique structure, and our goal is to understand your specific setup to create an accounting solution tailored to your needs..."
+            description="Our experts are equipped to represent your case and negotiate with the IRS on your behalf. We can represent you, ensuring a thorough and knowledgeable defence of your tax position..."
             imgUrl='/logos/irs.png'
+            redirectTo="/services/irs-compliance"
             />
-            <Service 
+            <ServiceCard 
             aosType="flip-down"
             title="Incorporation Services"
-            description="Every business entity has a unique structure, and our goal is to understand your specific setup to create an accounting solution tailored to your needs..."
+            description="Incorporating a business not only mitigates personal liability but also offers numberous tax advantages that individuals do not access to..."
             imgUrl='/logos/incorporation.png' 
+            redirectTo="/services/incorporation-services"
             />
-            <Service 
+            <ServiceCard 
             aosType="flip-down"
             title="Financial Advisory"
-            description="Every business entity has a unique structure, and our goal is to understand your specific setup to create an accounting solution tailored to your needs..."
+            description="We are all well aware that business conditions are not only dynamic but also growing complex each day. They not only affect your business but also your personal net worth..."
             imgUrl='/logos/financial.png'
+            redirectTo="/services/financial-advisory"
             />
-            <Service 
+            <ServiceCard 
             aosType="flip-down"
             title="Individual Services"
-            description="Every business entity has a unique structure, and our goal is to understand your specific setup to create an accounting solution tailored to your needs..."
+            description="As an employee or practicing professional, you are hard-pressed for time to personally manage your financials. Our experts offer a range of services..."
             imgUrl='/logos/individual.png'
+            redirectTo="/services/individual-services"
             />
 
             
@@ -82,16 +90,22 @@ const Home = () => {
               To be the leading CPA firm recognized for our unwavering commitment to excellence, innovation, and the success
               of our clients, while fostering a positive impact on our community and the accounting profession.
             </div>
-            <div className='text-sm md:text-base lg:text-xl font-bold pt-8'>
-              <span>Anuj Mehra</span><br/>
-              <span>Partner</span>
+            <div className='flex justify-between'>
+              <div className='text-sm md:text-base lg:text-xl font-bold pt-8'>
+                <span>Anuj Mehra</span><br/>
+                <span>Partner</span>
+              </div>
+              <div className='text-sm md:text-base lg:text-xl font-bold pt-8'>
+                <span>Sadiya Mehra</span><br/>
+                <span>Partner</span>
+            </div>
             </div>
           </div>
           </div>
       </div>
       <div className='bg-[#E5EEF6] py-20 md:py-30'>
         <div className='w-4/5 mx-auto '>
-          <div className='font-bold text-2xl md:text-[40px] pt-3 text-[#323232] mb-16'>Get to know the amazing features you will get.</div>
+          <div className='font-bold text-2xl md:text-[40px] pt-3 text-[#323232] mb-16'>How are we different?</div>
             <div className='grid place-items-center lg:grid-rows-1  lg:grid-cols-3 gap-10'>
               <QualityCard 
                 img={"/icons/quality.png"} 

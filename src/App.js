@@ -5,7 +5,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Aos from 'aos';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import 'aos/dist/aos.css';
 import Footer from './components/Footer';
 import Quality from './pages/Quality';
@@ -23,13 +23,19 @@ import IndividualServices from './pages/IndividualServices';
 
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
   useScrollReset();
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+};
+
+
   return (
     <div className='font-catamaran'>
-      <Navbar />
+      <Navbar isOpen={isOpen} toggleMenu={toggleMenu} />
       <Routes>
         <Route path="*" element={<Home />} />
         <Route path='/services' element={<Services />} />

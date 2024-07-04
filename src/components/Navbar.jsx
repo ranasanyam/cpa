@@ -18,15 +18,13 @@ const services = [
     'Financial Advisory',
     'Individual Services'
 ]
-const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
+const Navbar = ({ isOpen, toggleMenu }) => {
+    
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [visible, setVisible] = useState(true);
     const lastScrollTop = useRef(0);
 
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
+
 
     const handleMouseEnter = () => {
         setIsDropdownOpen(true);
@@ -61,8 +59,33 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`bg-primary-100 text-light-100 shadow-lg fixed z-20 left-0 right-0 top-0 h-20 duration-500 ${visible ? 'translate-y-0' : 'translate-y-[-80px]'}`}>
-      <div className="pr-8 pl-4 md:px-4 md:w-11/12 lg:w-4/5 mx-auto flex justify-between items-center h-20">
+    <nav className={`bg-primary-100 text-light-100 shadow-lg fixed z-20 left-0 right-0 top-0 h-30 duration-500 ${visible ? 'translate-y-0' : 'translate-y-[-120px]'}`}>
+    <div className='bg-primary-100 border-b h-10'>
+        <div className='w-11/12 lg:w-4/5 mx-auto h-full'>
+        <div className='flex flex-col md:flex-row md:justify-between md:items-center h-full'>
+        <div className='gap-5 hidden md:flex'>
+                <LinkedInIcon  />
+                <FacebookIcon  />
+                <XIcon />
+              </div>
+          <div className='flex py-2 md:py-0 justify-between'>
+            <div className='md:mr-10 flex'>
+              <span className='mr-0 xxs:mr-2'>
+                <EmailIcon />
+              </span>
+              amsm@email.com
+            </div>
+            <div>
+              <span className='mr-0 xxs:mr-2'>
+                <CallIcon />
+              </span>
+              +1 (248) 787-0502
+            </div> 
+          </div>
+        </div>
+        </div>
+      </div>
+      <div className="w-11/12 lg:w-4/5 mx-auto flex justify-between items-center h-20">
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-light-100">
             <MenuIcon sx={{ fontSize: 40 }} />
@@ -79,9 +102,10 @@ const Navbar = () => {
               className="relative group"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
+              onClick={handleMouseLeave}
             >
               <a 
-              href="/services" 
+              href="#services" 
               className="text-lg lg:text-[20px] text-light-100 hover:text-light-200 flex items-center transition-all">
                 Services <span className='relative w-6 h-6 inline-block'>
                 
@@ -114,31 +138,7 @@ const Navbar = () => {
         </div>
       
       </div>
-      <div className='bg-primary-100 py-2 border-t'>
-        <div className='w-11/12 md:w-4/5 mx-auto'>
-        <div className='flex flex-col md:flex-row md:justify-between'>
-        <div className='gap-5 hidden md:flex'>
-                <LinkedInIcon  />
-                <FacebookIcon  />
-                <XIcon />
-              </div>
-          <div className='flex py-2 md:py-0 justify-between'>
-            <div className='md:mr-10 flex'>
-              <span className='mr-2'>
-                <EmailIcon />
-              </span>
-              amsm@email.com
-            </div>
-            <div>
-              <span className='mr-2'>
-                <CallIcon />
-              </span>
-              +1 (248) 787-0502
-            </div> 
-          </div>
-        </div>
-        </div>
-      </div>
+      
       {isOpen && (
         <div
           className="fixed inset-0 bg-gray-800 bg-opacity-50 z-40"
